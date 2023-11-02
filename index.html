@@ -1,22 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="login page for meetmarket social media">
-    <link rel="stylesheet" href="./css/main.min.css">
-    <script src="./node_modules/bootstrap/js/"></script>
-    <title>meetMarket | login</title>
-</head>
-<body class="min-vh-100">
-    <header class="border border-bottom-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-4 bg-danger">lala</div>
-                <div class="col-4 bg-primary">lalala</div>
-                <div class="col-4 text-bg-dark">lalalala</div>
-            </div>
-        </div>
-    </header>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="login page for meetmarket social media"
+		/>
+		<link rel="stylesheet" href="./css/main.css" />
+		<script src="./node_modules/bootstrap/js/"></script>
+		<title>meetMarket | login</title>
+	</head>
+	<body data-bs-theme="light">
+		<header class="border border-bottom-2 py-5">
+			<nav
+				class="container py-5 warning-bg-subtle d-flex justify-content-between"
+			>
+				<div class="logo">
+					<h1>meetMarket</h1>
+				</div>
+				<div class="d-flex">
+					<button class="btn btn-warning my-auto mx-2">hei</button>
+					<button class="btn btn-outline-danger my-auto mx-2">
+						hei
+					</button>
+					<button class="btn btn-light my-auto mx-2">hei</button>
+				</div>
+			</nav>
+		</header>
+
+		<main class="pt-3 pb-5">
+			<div class="container">
+				<div class="row d-flex justify-content-center">
+					<div class="card my-3 col-10 col-lg-6">
+                        <h2 class="card-title">New User?</h2>
+                        <span class="card-subtitle">create an account here</span>
+						<div class="card-content">
+							<form class="form py-2 px-1" action="/profile.html">
+								<div class="mb-3">
+									<label for="name" class="form-label"
+										>Your Name</label
+									>
+									<input
+										required
+										aria-required="true"
+										type="name"
+										class="form-control"
+										id="name"
+										placeholder="You know your name"
+									/>
+									<label for="email" class="form-label"
+										>Email address</label
+									>
+									<input
+										required
+										aria-required="true"
+										type="email"
+										class="form-control"
+										id="email"
+										placeholder="name@example.com"
+									/>
+									<label for="password" class="form-label"
+										>Password</label
+									>
+									<input
+										required
+										aria-required="true"
+										type="password"
+										class="form-control"
+										id="password"
+										placeholder="*****"
+									/>
+									<input
+										type="submit"
+										class="btn btn-primary mt-3"
+										id="submit"
+										value="Sign in Bro!"
+									/>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="row d-flex justify-content-center">
+					<div class="card my-3 col-10 col-lg-6">
+                        <h2 class="card-title">Already have an account?</h2>
+                        <span class="sub-title">Log in buddy!</span>
+						<div class="card-content">
+							<form class="form py-2 px-1" action="/profile.html">
+								<div class="mb-3">
+									<label for="name" class="form-label"
+										>Your Name</label
+									>
+									<input
+										required
+										aria-required="true"
+										type="name"
+										class="form-control"
+										id="name"
+										placeholder="You know your name"
+									/>
+									<label for="email" class="form-label"
+										>Email address</label
+									>
+									<input
+										required
+										aria-required="true"
+										type="email"
+										class="form-control"
+										id="email"
+										placeholder="name@example.com"
+									/>
+									<label for="password" class="form-label"
+										>Password</label
+									>
+									<input
+										required
+										aria-required="true"
+										type="password"
+										class="form-control"
+										id="password"
+										placeholder="*****"
+									/>
+									<input
+										type="submit"
+										class="btn btn-primary mt-3"
+										id="submit"
+										value="Sign in Bro!"
+									/>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
 </html>
