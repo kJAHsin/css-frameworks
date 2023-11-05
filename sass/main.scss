@@ -1,22 +1,7 @@
-// custom variables
+// Custom variables and mixins
 @import "variables";
-// import functions and variables
+
+// Import Bootstrap files
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
-
-// maps and mixins
-$direction: to right;
-$start-color: $primary;
-$mid-color: $secondary;
-$end-color: $primary;
-
-@mixin gradient($direction, $start-color, $mid-color, $end-color) {
-    background-image: linear-gradient($direction, $start-color, $mid-color, $end-color);
-}
-
-// importing bootstrap files
 @import "../node_modules/bootstrap/scss/bootstrap";
-
-header {
-    @include gradient($direction, $start-color, $mid-color, $end-color);
-}

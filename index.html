@@ -8,7 +8,7 @@
 			content="login page for meetmarket social media"
 		/>
 		<link rel="stylesheet" href="./css/main.css" />
-		<script src="./node_modules/bootstrap/js/"></script>
+		<script src="./node_modules/bootstrap/js/" defer></script>
 		<title>meetMarket | login</title>
 	</head>
 	<body data-bs-theme="light">
@@ -20,11 +20,9 @@
 					<h1>meetMarket</h1>
 				</div>
 				<div class="d-flex">
-					<button class="btn btn-warning my-auto mx-2">hei</button>
-					<button class="btn btn-outline-danger my-auto mx-2">
-						hei
-					</button>
-					<button class="btn btn-light my-auto mx-2">hei</button>
+					<a class="btn btn-warning my-auto mx-2">Home</a>
+					<a class="btn btn-outline-danger my-auto mx-2"> Feed </a>
+					<a class="btn btn-light my-auto mx-2">My Profile</a>
 				</div>
 			</nav>
 		</header>
@@ -33,8 +31,10 @@
 			<div class="container">
 				<div class="row d-flex justify-content-center">
 					<div class="card my-3 col-10 col-lg-6">
-                        <h2 class="card-title">New User?</h2>
-                        <span class="card-subtitle">create an account here</span>
+						<h2 class="card-title">New User?</h2>
+						<span class="card-subtitle"
+							>create an account here</span
+						>
 						<div class="card-content">
 							<form class="form py-2 px-1" action="/profile.html">
 								<div class="mb-3">
@@ -84,8 +84,8 @@
 				</div>
 				<div class="row d-flex justify-content-center">
 					<div class="card my-3 col-10 col-lg-6">
-                        <h2 class="card-title">Already have an account?</h2>
-                        <span class="sub-title">Log in buddy!</span>
+						<h2 class="card-title">Already have an account?</h2>
+						<span class="sub-title">Log in buddy!</span>
 						<div class="card-content">
 							<form class="form py-2 px-1" action="/profile.html">
 								<div class="mb-3">
