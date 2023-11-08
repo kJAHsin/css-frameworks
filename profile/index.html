@@ -8,41 +8,67 @@
 			content="individual profile page for meetMarket"
 		/>
 		<link rel="stylesheet" href="../css/main.css" />
+		<script
+			src="../node_modules\bootstrap\dist\js\bootstrap.bundle.js"
+			defer
+		></script>
+		<script src="../js/index.module.js" type="module"></script>
 		<title>meetMarket | profile</title>
 	</head>
 	<body>
-			<h1 class="d-none">Profile page</h1>
-			<nav
-				class="container py-5 warning-bg-subtle d-flex justify-content-between"
-			>
-				<div class="logo">
-					<a
-						href="../index.html"
-						class="text-decoration-none text-secondary-emphasis fs-2 navbar-brand"
-						><span class="text-danger fw-bolder">meet</span
-						>Market</a
-					>
+		<h1 class="d-none">Profile page</h1>
+		<nav
+			class="border border-bottom-2 py-5 navbar navbar-expand-lg navbar-light bg-light sticky-top"
+		>
+			<div class="container">
+				<a
+					href="./index.html"
+					class="text-decoration-none text-secondary-emphasis fs-2 navbar-brand"
+					><span class="text-danger fw-bolder">meet</span>Market</a
+				>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse"
+					id="navbarSupportedContent"
+				>
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a
+								class="btn btn-outline-primary my-auto mx-2 nav-link"
+								href="../index.html"
+								>Home</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="btn btn-outline-primary my-auto mx-2 nav-link"
+								href="../feed/index.html"
+							>
+								Feed
+							</a>
+						</li>
+						<li class="nav-item">
+							<a
+								class="btn btn-outline-primary my-auto mx-2 active nav-link"
+								href="#"
+								aria-current="page"
+								>My Profile</a
+							>
+						</li>
+					</ul>
 				</div>
-				<div class="d-flex">
-					<a
-						class="btn btn-outline-primary my-auto mx-2"
-						href="../index.html"
-						>Home</a
-					>
-					<a
-						class="btn btn-outline-primary my-auto mx-2"
-						href="../feed/index.html"
-					>
-						Feed
-					</a>
-					<a
-						class="btn btn-outline-primary my-auto mx-2 active"
-						href="./profile/index.html"
-						aria-current="page"
-						>My Profile</a
-					>
-				</div>
-			</nav>
+			</div>
+		</nav>
 		<main class="pt-5">
 			<div class="container d-flex justify-content-center">
 				<div class="card profile">
@@ -53,9 +79,11 @@
 							src="https://i.pravatar.cc/600"
 							alt="my face"
 						/>
-                        <div class="card-body">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita consequuntur accusamus nulla, harum hic aperiam?
-                        </div>
+						<div class="card-body">
+							Lorem ipsum dolor sit, amet consectetur adipisicing
+							elit. Expedita consequuntur accusamus nulla, harum
+							hic aperiam?
+						</div>
 					</div>
 				</div>
 			</div>
