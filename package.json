@@ -2,7 +2,7 @@
   "name": "css-frameworks",
   "version": "1.0.0",
   "description": "OOOOGA BOOOOGA BOOOOOGA",
-  "main": "index.js",
+  "main": "index.module.js",
   "scripts": {
     "watch": "sass --watch --update sass:css",
     "build": "sass --update sass:css"
