@@ -12,7 +12,7 @@
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 		crossorigin="anonymous"></script>
 	<script src="./js/index.mjs" type="module"></script>
-	<title>meetMarket | login</title>
+	<title>login | meetMarket</title>
 </head>
 
 <body data-bs-theme="light">
@@ -52,21 +52,30 @@
 			<div class="row px-sm-2 pt-2 pb-5">
 				<div class="card my-3 me-md-1 col-12 col-md">
 					<h2 class="card-title">New User?</h2>
-					<span class="card-subtitle">create an account here</span>
+					<span class="card-subtitle">Create an account here</span>
 					<div class="card-content">
-						<form class="form py-2 px-1" action="/profile/" method="get">
-							<div class="mb-3">
-								<label for="name" class="form-label">Your Name</label>
-								<input required aria-required="true" type="name" class="form-control" id="name"
-									placeholder="You know your name" minlength="8" maxlength="40" />
-								<label for="email" class="form-label">Email address</label>
-								<input required aria-required="true" type="email" class="form-control" id="email"
-									placeholder="name@example.com" />
-								<label for="password" class="form-label">Password</label>
-								<input required aria-required="true" type="password" class="form-control" id="password"
-									placeholder="*****" minlength="8" />
-								<input type="submit" class="btn btn-primary mt-3" id="submit" value="Sign up Bro!" />
-							</div>
+						<form class="form py-2 px-1 mb-3" id="registration-form" action="/auth/register" method="get">
+							<label for="name" class="form-label">Your Name</label>
+							<input required aria-required="true" type="text" class="form-control" id="name" name="name"
+								placeholder="You know your name" minlength="8" maxlength="40"
+								title="Please enter your desired username." />
+							<label for="email" class="form-label">Email address</label>
+							<input required aria-required="true" type="email" class="form-control" id="email"
+								name="email" placeholder="name@example.com" pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+								title="Please enter a valid @noroff.no or @stud.noroff.no email address." />
+							<label for="password" class="form-label">Password</label>
+							<input required aria-required="true" type="password" class="form-control" id="password"
+								name="password" placeholder="*****" minlength="8" maxlength="22"
+								title="Please enter a password between 8 and 22 characters in length" />
+							<label for="avatar" class="form-label">Avatar</label>
+							<input aria-required="false" type="url" class="form-control" id="avatar"
+								name="avatar"
+								title="Please add a URL link to your desired avatar (optional)" />
+							<label for="banner" class="form-label">Banner</label>
+							<input aria-required="false" type="url" class="form-control" id="banner"
+								name="banner"
+								title="Please add a URL link to your desired banner image (optional)" />
+							<input type="submit" class="btn btn-primary mt-3" name="submit" value="Sign up Bro!" />
 						</form>
 					</div>
 				</div>
@@ -74,17 +83,17 @@
 					<h2 class="card-title">Already have an account?</h2>
 					<span class="sub-title">Log in buddy!</span>
 					<div class="card-content">
-						<form class="form py-2 px-1" action="/profile/" method="get">
-							<div class="mb-3">
-								<label for="emailUser" class="form-label">Email address (user@email.com)</label>
-								<input required aria-required="true" type="email" class="form-control" id="emailUser"
-									placeholder="name@example.com" />
-								<label for="passwordUser" class="form-label">Password (password)</label>
-								<input required aria-required="true" type="passwordUser" class="form-control"
-									id="passwordUser" placeholder="*****" minlength="8" />
-								<input type="submit" class="btn btn-primary mt-3" id="submitUser"
-									value="Sign in Bro!" />
-							</div>
+						<form class="form py-2 px-1 mb-3" id="login-form" action="/profile/" method="get">
+							<label for="emailUser" class="form-label">Email address (user@stud.noroff.com)</label>
+							<input required aria-required="true" type="email" id="emailUser" class="form-control"
+								name="emailUser" placeholder="name@example.com" pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+								title="Please enter the email address assosciated with your account" />
+							<label for="passwordUser" class="form-label">Password (password)</label>
+							<input required aria-required="true" type="password" class="form-control"
+								id="passwordUser" name="passwordUser" placeholder="*****" minlength="8"
+								pattern="password" title="Please enter your password" />
+							<input type="submit" class="btn btn-primary mt-3" id="submitUser" value="Sign in Bro!" />
+
 						</form>
 					</div>
 				</div>
