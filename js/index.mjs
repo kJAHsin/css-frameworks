@@ -1,4 +1,4 @@
-import { validate, invalidate, empty } from "./validationFunctions.js";
+import { validate, invalidate, empty } from "./functions/validationFunctions.js";
 
 // new user signup
 // signup name validation
