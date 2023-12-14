@@ -54,7 +54,7 @@
 					<h2 class="card-title">New User?</h2>
 					<span class="card-subtitle">Create an account here</span>
 					<div class="card-content">
-						<form class="form py-2 px-1 mb-3" id="registration-form" action="/auth/register" method="get">
+						<form class="form py-2 px-1 mb-3" id="registration-form" action="/auth/register" method="post">
 							<label for="name" class="form-label">Your Name</label>
 							<input required aria-required="true" type="text" class="form-control" id="name" name="name"
 								placeholder="You know your name" minlength="8" maxlength="40"
@@ -83,15 +83,14 @@
 					<h2 class="card-title">Already have an account?</h2>
 					<span class="sub-title">Log in buddy!</span>
 					<div class="card-content">
-						<form class="form py-2 px-1 mb-3" id="login-form" action="/profile/" method="get">
+						<form class="form py-2 px-1 mb-3" id="login-form" action="/auth/login" method="post">
 							<label for="emailUser" class="form-label">Email address (user@stud.noroff.com)</label>
 							<input required aria-required="true" type="email" id="emailUser" class="form-control"
-								name="emailUser" placeholder="name@example.com" pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+								name="email" placeholder="name@example.com" pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
 								title="Please enter the email address assosciated with your account" />
 							<label for="passwordUser" class="form-label">Password (password)</label>
 							<input required aria-required="true" type="password" class="form-control"
-								id="passwordUser" name="passwordUser" placeholder="*****" minlength="8"
-								pattern="password" title="Please enter your password" />
+								id="passwordUser" name="password" placeholder="*****" minlength="8" title="Please enter your password" />
 							<input type="submit" class="btn btn-primary mt-3" id="submitUser" value="Sign in Bro!" />
 
 						</form>

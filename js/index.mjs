@@ -77,7 +77,6 @@ passwordInput.addEventListener("input", (e) => {
 const form = document.querySelector("#registration-form");
 const actionURL = new URL(form.action);
 const registerURL = `${API_URL}${actionURL.pathname}`;
-console.log(registerURL)
 
 async function registerUser(profile) {
     const response = await fetch(registerURL, {
@@ -98,3 +97,31 @@ form.addEventListener("submit", (e) => {
     const profile = Object.fromEntries(profileData.entries());
     registerUser(profile)
 })
+
+
+// register new user
+const loginForm = document.querySelector("#login-form");
+const loginActionURL = new URL(loginForm.action);
+const loginURL = `${API_URL}${loginActionURL.pathname}`;
+console.log(loginURL)
+
+async function loginUser(login) {
+    const response = await fetch(loginURL, {
+        headers: {
+            "Content-Type": "application/json"
+        },
+        method: "post",
+        body: JSON.stringify(login)
+    })
+    const result = await response.json();
+    window.location.href = "../profile";
+}
+
+loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const loginForm = e.target;
+    const loginData = new FormData(loginForm);
+    const login = Object.fromEntries(loginData.entries());
+    loginUser(login)
+})
+
