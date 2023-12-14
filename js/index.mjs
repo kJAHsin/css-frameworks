@@ -26,7 +26,7 @@ emailSignup.addEventListener("input", (e) => {
     (regEx.test(emailValue))
         ? validate(emailSignup)
         : invalidate(emailSignup)
-    
+
     if (!emailValue) empty(emailSignup);
 })
 
@@ -62,14 +62,14 @@ emailInput.addEventListener("input", (e) => {
 const passwordInput = document.getElementById("passwordUser");
 
 passwordInput.addEventListener("input", (e) => {
-	const password = e.target.value;
-	const requiredPassword = "password";
+    const password = e.target.value;
+    const requiredPassword = "password";
 
-	password === requiredPassword
-		? validate(passwordInput)
-		: invalidate(passwordInput);
+    password === requiredPassword
+        ? validate(passwordInput)
+        : invalidate(passwordInput);
 
-	if (!password) empty(passwordInput);
+    if (!password) empty(passwordInput);
 });
 
 
@@ -90,6 +90,7 @@ async function registerUser(profile) {
     window.location.href = "../profile";
 }
 
+// register user on submit
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const form = e.target;
@@ -99,11 +100,10 @@ form.addEventListener("submit", (e) => {
 })
 
 
-// register new user
+// login as existing user
 const loginForm = document.querySelector("#login-form");
 const loginActionURL = new URL(loginForm.action);
 const loginURL = `${API_URL}${loginActionURL.pathname}`;
-console.log(loginURL)
 
 async function loginUser(login) {
     const response = await fetch(loginURL, {
@@ -113,10 +113,15 @@ async function loginUser(login) {
         method: "post",
         body: JSON.stringify(login)
     })
-    const result = await response.json();
-    window.location.href = "../profile";
+    const { accessToken, ...profile } = await response.json();
+    // window.location.href = "../profile";
+
+    // store token and profile info in local storage
+    localStorage.setItem("token", JSON.stringify(accessToken));
+    localStorage.setItem("profile", JSON.stringify(profile));
 }
 
+// login on submit form
 loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const loginForm = e.target;
