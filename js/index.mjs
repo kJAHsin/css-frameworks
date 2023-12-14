@@ -1,5 +1,9 @@
 import { validate, invalidate, empty } from "./functions/validationFunctions.js";
 import { API_URL } from "./api/constants.js";
+import { logoutBtn } from "./utils/logoutBtn.js";
+
+// show/hide log out btn based on login state
+logoutBtn();
 
 // new user signup
 // signup name validation
